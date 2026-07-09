@@ -99,6 +99,7 @@ class Program
 
                         bool isValid = false;
                         string input = Console.ReadLine();
+                        if(input == null) continue;
                         string[]pieces = input.Split('+');
 
                         List<int> numbers = new List<int>();
@@ -176,6 +177,7 @@ class Program
 
                         bool isValid = false;
                         string input = Console.ReadLine();
+                        if(input == null) continue;
                         string[]pieces = input.Split('-');
 
                         List<int> numbers = new List<int>();
@@ -254,6 +256,7 @@ class Program
 
                         bool isValid = false;
                         string input = Console.ReadLine();
+                        if(input == null) continue;
                         string[]pieces = input.Split('*');
 
                         List<int> numbers = new List<int>();
@@ -332,6 +335,7 @@ class Program
 
                         bool isValid = false;
                         string input = Console.ReadLine();
+                        if(input == null) continue;
                         string[]pieces = input.Split('/');
 
                         List<int> numbers = new List<int>();
