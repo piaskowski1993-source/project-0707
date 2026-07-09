@@ -21,8 +21,8 @@ class Calculator
     static public double sub(double a, double b) {return a - b;}
     static public int subList(List<int> subtraction )
     {
-        int result = 0;
-        for (int i = 0; i < subtraction.Count; i++)
+        int result = subtraction[0];
+        for (int i = 1; i < subtraction.Count; i++)
         {
             result -= subtraction[i];
         }
