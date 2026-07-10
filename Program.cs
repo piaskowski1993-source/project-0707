@@ -5,7 +5,29 @@ namespace Calculator;
 
 class Program
 {
+     static void TypeWriter(string text, int delayms = 60)
+                   {
+                    foreach( char c in text)
+                        {
+                        Console.Write(c);
+                        Thread.Sleep(delayms);
+                        }
+                    Console.WriteLine("");
+                   }
+
+     static void BannerTypeWriter(string text, int delayms = 70)
+                   {
+                    string [] lines = text.Split('\n');
+                    foreach (string line in lines)
+                        {
+                            Console.WriteLine(line);
+                            Thread.Sleep(delayms);
+                        }
+                   }
+   
     static void Main()
+
+    
     {
         bool LinebyLine = true;
         bool style = true;
@@ -13,8 +35,19 @@ class Program
     
              while(style)   
                 {
-                    Console.WriteLine("CHOOSE YOUR INPUT STYLE \n [1] LINE BY LINE SEPARATED WITH [ENTER] \n [2] ONE LINE CONNECTED WITH SYMBOLS");
-
+                    BannerTypeWriter(@"
+                                                                             _____       _            _       _             
+                                                                            / ____|     | |          | |     | |            
+                                                                            | |     __ _| | ___ _   _| | __ _| |_ ___  _ __ 
+                                                                            | |    / _` | |/ __| | | | |/ _` | __/ _ \| '__|
+                                                                            | |___| (_| | | (__| |_| | | (_| | || (_) | |   
+                                                                             \_____\__,_|_|\___|\__,_|_|\__,_|\__\___/|_|   ");
+                                                 
+                                                 
+                    string welcome = "WELCOME TO THE CALCULATOR CHOOSE YOUR STYLE OF INPUT";
+                    TypeWriter (welcome.PadLeft((Console.WindowWidth + welcome.Length) / 2));
+                    Console.WriteLine("                                                                                [1] LINE BY LINE SEPARATED WITH [ENTER]");
+                    Console.WriteLine("                                                                                [2] ONE LINE CONNECTED WITH SYMBOLS");
                     switch (Console.ReadLine())
                     {
                         case "1":
@@ -46,7 +79,7 @@ class Program
                     Console.WriteLine("INPUT STLE: ONE LINE CONNECTED WITH A SYMBOL");
             
        
-                    Console.WriteLine("WELCOME \n CHOOSE YOUR OPERTAION \n [1] ADDITION  [2]SUBTRACTION  [3]MULTIPLICATION [4]DIVISION  [5]CHANGE INPUT STYLE [6]EXIT");
+                    Console.WriteLine("CHOOSE YOUR OPERTAION \n [1] ADDITION  [2]SUBTRACTION  [3]MULTIPLICATION [4]DIVISION  [5]CHANGE INPUT STYLE [6]EXIT");
     
  switch(Console.ReadLine())
     {
